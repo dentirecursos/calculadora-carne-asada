@@ -1,33 +1,32 @@
 /**
- * Clase: CalculadoraCarneAsada
- * Propósito: Modela una reunión de carne asada permitiendo activar o desactivar
- * de forma independiente cada alimento, bebida e insumo de la lista, calculando
- * las cantidades exactas necesarias según el número de asistentes.
+ * Clase Base: CalculadoraCarneAsada (Versión 2 - Herencia)
+ * Materia: Programación Orientada a Objetos - Actividad 3
+ * 
+ * Propósito: Modela una reunión de carne asada base.
+ * Nota: Los atributos han sido declarados con visibilidad 'protected' para permitir 
+ * que las subclases derivadas (AsadoVIP, AsadoEmpresarial) puedan reutilizarlos directamente.
  */
 public class CalculadoraCarneAsada {
 
     // ------------------------------------------------------------------------
-    // ATRIBUTOS PRIVADOS (Principio de Encapsulamiento)
+    // ATRIBUTOS PROTEGIDOS (Acceso permitido para subclases / Herencia)
     // ------------------------------------------------------------------------
-    private int numeroAsistentes;
-    private boolean quiereCarne;
-    private boolean quiereChorizo;
-    private boolean quiereQueso;
-    private boolean quiereTortillas;
-    private boolean quiereCebollitas;
-    private boolean quiereGuacamole;
-    private boolean quiereSalsa;
-    private boolean quiereRefresco;
-    private boolean quiereCerveza;
-    private boolean quiereCarbon;
-    private boolean quiereHielos;
+    protected int numeroAsistentes;
+    protected boolean quiereCarne;
+    protected boolean quiereChorizo;
+    protected boolean quiereQueso;
+    protected boolean quiereTortillas;
+    protected boolean quiereCebollitas;
+    protected boolean quiereGuacamole;
+    protected boolean quiereSalsa;
+    protected boolean quiereRefresco;
+    protected boolean quiereCerveza;
+    protected boolean quiereCarbon;
+    protected boolean quiereHielos;
 
     // ------------------------------------------------------------------------
-    // CONSTRUCTOR (Inicializa la instancia con las preferencias seleccionadas)
+    // CONSTRUCTOR PRINCIPAL
     // ------------------------------------------------------------------------
-    /**
-     * Constructor completo de la clase CalculadoraCarneAsada.
-     */
     public CalculadoraCarneAsada(int numeroAsistentes, boolean quiereCarne, 
                                 boolean quiereChorizo, boolean quiereQueso, 
                                 boolean quiereTortillas, boolean quiereCebollitas, 
@@ -160,4 +159,8 @@ public class CalculadoraCarneAsada {
 
         System.out.println("==========================================\n");
     }
+
+    // Getters públicos
+    public int getNumeroAsistentes() { return numeroAsistentes; }
+    public boolean isQuiereCarne() { return quiereCarne; }
 }
